@@ -2,7 +2,6 @@
   "name": "BanallBot",
   "description": "Telegram's black magic.",
   "keywords": ["python3", "telegram"],
-  "stack": "container",
   "addons": [],
   "buildpacks": [
     {
