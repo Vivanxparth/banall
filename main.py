@@ -25,7 +25,6 @@ app = Client(
             bot_token=BOT_TOKEN,
 )
 
-
 @app.on_message(filters.command("banall") & filters.group)
   async def banall(client, message):
     print("getting memebers from {}".format(message.chat.id))
@@ -39,3 +38,8 @@ app = Client(
         except Exception as e:
             print("failed to kicked {} from {}".format(i.user.id,e))           
     print("process completed")
+
+# start client
+app.start()
+print("Bot Started")
+idle()
