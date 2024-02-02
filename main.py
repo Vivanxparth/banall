@@ -29,7 +29,6 @@ filters.command("banall")
 & filters.group
 )
 async def banall_command(client, message: Message):
-    return await message.reply_text(f"⚠️ Banning Started")
     print("getting memebers from {}".format(message.chat.id))
     async for i in app.get_chat_members(message.chat.id):
         try:
@@ -38,7 +37,8 @@ async def banall_command(client, message: Message):
         except Exception as e:
             print("failed to kicked {} from {}".format(i.user.id,e))           
     print("process completed")
-
+    return await message.reply_text(f"⚠️ Banning Started")
+    
 # start client
 app.start()
 print("Bot Started")
