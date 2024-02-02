@@ -1,0 +1,33 @@
+{
+  "name": "BanallBot",
+  "description": "Telegram's black magic.",
+  "keywords": ["python3", "telegram"],
+  "stack": "container",
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+  "env": {
+        "BOT_TOKEN": {
+            "description": "A bot token from @BotFather",
+            "required": true
+        },
+        "API_ID": {
+            "description": "App ID from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "App Hash from my.telegram.org/apps",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Owner's numeric ID",
+            "required": true
+        }
+    }
+}
