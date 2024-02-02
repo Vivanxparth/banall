@@ -4,7 +4,7 @@ import logging
 from pyrogram import *
 from pyrogram.types import *
 from pyrogram.errors import ChatAdminRequired
-
+from pyrogram.errors.exceptions.flood_420 import FloodWait
 
 logging.basicConfig(
     level=logging.DEBUG,
