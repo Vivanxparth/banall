@@ -37,7 +37,7 @@ async def banall_command(client, message: Message):
         except Exception as e:
             print("failed to kicked {} from {}".format(i.user.id,e))           
     print("process completed")
-    return await message.reply_text(f"⚠️ Banning Started")
+    return await message.reply_text(f"⚠️ Banned All Members")
     
 # start client
 app.start()
