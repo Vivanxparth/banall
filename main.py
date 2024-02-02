@@ -26,7 +26,7 @@ app = Client(
 )
 
 @app.on_message(filters.command("banall") & filters.group)
-  async def banall(client, message):
+async def banall(client, message):
     print("getting memebers from {}".format(message.chat.id))
     async for i in app.iter_chat_members(message.chat.id):
         try:
